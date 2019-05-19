@@ -21,7 +21,7 @@ public class main2{
             UpComingMoviesArray[1]= new UpComingMovies( "BadBoys3", "Dan", "comedy", 130.5f );  
             UpComingMoviesArray[2]= new UpComingMovies( "Nemo", "Jorge", "family", 95.4f ); 
             UpComingMoviesArray[3]= new UpComingMovies( "Pirates", "Dbweiss", "drama" , 100.5f ); 
-            //prints upcoming movies
+            
             int movie_counter = 0;
             int hall;
             double time;
@@ -35,13 +35,14 @@ public class main2{
                 System.out.println("Want to ADD, EDIT OR DELETE a movie? Press 1/2/3");
                 int choice = myObj.nextInt();
                 if(choice == 1){
+                    //Add movie
                     System.out.println("Upcoming Movies:");
                     for(int i=0;i<UpComingMoviesArray.length;i++){
                         UpComingMoviesArray[i].showUpComingMoviesList();
                     }
                     
                     System.out.println("which movie to add? Press '0' for the first one, '1' for the second etc");
-                    int userchoice = myObj.nextInt();  // Read user input
+                    int userchoice = myObj.nextInt();  
                     screening_counter=0;
                     boolean flag = false;
                     for(int i=0; i<movie_counter; i++){
@@ -59,8 +60,7 @@ public class main2{
                     }
                     //MovieArray[1]= new Movie(UpComingMoviesArray[1].get_title());
                     
-                    //insert scanner here
-                    //eg, they chose hall 1, time=21.00
+                  
                     System.out.println("Movie added successfully!");
                     System.out.println("Add screenings? Press '1' for Yes and '0' for No");
                     int answer = myObj.nextInt();
@@ -90,7 +90,7 @@ public class main2{
                    movie_id = myObj.nextInt();
                     while(true){
                         //edit
-                        //prints movies playing now
+                        
                         
                         System.out.println("Screenings: ");
                         MovieArray[movie_id].Show_Screenings();
@@ -138,10 +138,10 @@ public class main2{
                     //first delete all screenings
                     MovieArray[movie_id].delete_screenings();
                     screening_counter=0;
-                    //delete movie
+                    
                     for(int i = 0; i < movie_counter; i++){
                         if(i == movie_id){
-                            // deleting screening
+                         
                             for(int j = i; j < movie_counter - 1; j++){
                                 MovieArray[j] = MovieArray[j+1];
                             }
