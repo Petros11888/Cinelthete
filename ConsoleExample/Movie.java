@@ -10,8 +10,8 @@ public class Movie
     // instance variables - replace the example below with your own
 
     private String title;
-    private int count=0;
-    private int count_screen=0;
+    private int count= 0;
+    private int count_screen = 0;
     private String director;
     //private String[] starring;
     private String genre;
@@ -85,6 +85,20 @@ public class Movie
         count_screen = 0;
             
     }
+    public void display_description(){
+        System.out.println(this.title);
+        System.out.println("Directed by " + this.director);
+        System.out.println("It is a/an " + this.genre + "film");
+        System.out.println("It lasts " + this.duration + " seconds");
     
+    }
+    public int get_Screening_hall(int x){
+        return this.active_screening_halls[x];
+       
+    }
+    public double get_Screening_time(int x){
+        return this.active_screening_times[x];
+       
+    }
 }  
 
