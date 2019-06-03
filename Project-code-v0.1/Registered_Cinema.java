@@ -21,7 +21,11 @@ public class Registered_Cinema extends Cinema
             return false;
     }
     
-    public void displayFoundCinemas(){}
+    public void displayFoundCinemas(String name){
+        if (this.name==name)
+            System.out.println("Vrethike Cinema me to onoma: " + name);
+    
+    }
     
     public void removeMovie(Movie movie){
         for(Movie i : MovieList){
@@ -40,7 +44,18 @@ public class Registered_Cinema extends Cinema
             return null;
     }
     
-    public void inputsData(){}
+    public void inputsData(){
+        Scanner scan = new Scanner(System.in);
+        Eisagwgi_Stoixeiwn esp = new Eisagwgi_Stoixeiwn();
+        esp.eggrafiKinimatografou();
+        esp.city.setText(scan.nextLine());
+        esp.cinema_address.setText(scan.nextLine());
+        esp.cinema_name.setText(scan.nextLine());
+        esp.owner_name.setText(scan.nextLine());
+        esp.telephone_number.setText(scan.nextLine());
+        esp.cinema_email.setText(scan.nextLine());
+        
+    }
     
     public void addMovie(Movie movie){
          for(Movie i : MovieList){
