@@ -18,8 +18,12 @@ public class Ticket
     
     public void messageToUser(){}
     
-    public void validityCheck(){
-    
+    public boolean validityCheck(){
+        if(this.getTicketType()=="Anilikos"||this.getTicketType()=="Enilikos"||
+        this.getTicketType()=="Foititiko"|| this.getTicketType()=="Prosfora")
+            return true;
+        else 
+            return false;
     }
     
     public void checkTicketType(){}
