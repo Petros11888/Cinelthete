@@ -27,7 +27,10 @@ public class Screening_Hall
         System.out.println("O megistos arithmos diathesimwn thesewn einai: "+ available_seats);
     }
     
-    public void checkUserChoise(){}
+    public void checkUserChoise(){
+        Eisagwgi_Stoixeiwn esp = new Eisagwgi_Stoixeiwn();
+        esp.cinema.getText();
+    }
     
     public void seatsForAlternateScreening(){}
     
