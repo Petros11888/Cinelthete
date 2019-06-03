@@ -49,12 +49,28 @@ public class Registered_User extends User
         esp2.choose_theater.setText(scan.nextLine());   
     }
     
-    public void chooseCinema(){}
+    public void chooseCinema(){
+        Scanner scan = new Scanner(System.in);
+        Eisagwgi_Stoixeiwn esp5 = new Eisagwgi_Stoixeiwn();
+        esp5.epilogiKinimatografou();
+        esp5.cinema.setText(scan.nextLine());
+    }
     
-    public void chooseMovie(){}
+    public void chooseMovie(){
+        Scanner scan = new Scanner(System.in);
+        Eisagwgi_Stoixeiwn esp3 = new Eisagwgi_Stoixeiwn();
+        esp3.epilogiTainias();
+        esp3.movie.setText(scan.nextLine());
+    }
     
     public void chooseHour(){}
     
-    public void chooseNumberOfSeats(){}
+    //paraplanitiko to onoma tis methodou alla emeine apo tin analisi sta sequence diagrams
+    public void chooseNumberOfSeats(){ 
+        Scanner scan = new Scanner(System.in);
+        Eisagwgi_Stoixeiwn esp4 = new Eisagwgi_Stoixeiwn();
+        esp4.epilogiThesis();
+        esp4.seat_position.addActionListener(this);
+    }
     
 }
